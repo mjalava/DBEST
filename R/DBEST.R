@@ -185,7 +185,7 @@ function(data, data.type, seasonality=-1, algorithm,  breakpoints.no=-1, general
         Sig_Slope_position <- c()
         Sig_BP_position <- c()
         
-        if(Sig_Slope_no>0) {
+        if(Sig_Slope_no>0 && BIC_BP_no > 0) {
                 Sig_Slope_position <- which(Pvalue[-length(Pvalue)]<alpha)
                 Sig_turning_position <- c()
                 if(shared[1] == 1) {
